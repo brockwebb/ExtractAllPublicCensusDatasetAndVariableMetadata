@@ -10,3 +10,8 @@ My goal is to see if I can:
 3. make Census data more accessible to answer questions via natural language
 4. Allow LLMs to write more accurate code/do analysis 
 
+# Notes
+- due to the number of variables (in the 3+ million range?) I broke up the files by decade
+- About 3k variables wouldn't resolve, and got put into the unknown file... not bad though
+- I used AI -- GPT 40, GPT 4o-1, Claude, and Gemini back and forth as I worked out issues
+- There is a lot of logging and error handling... this was not an easy case, and there's a chance things still aren't perfect... such is life
