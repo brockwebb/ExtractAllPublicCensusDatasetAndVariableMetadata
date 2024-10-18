@@ -15,3 +15,9 @@ My goal is to see if I can:
 - About 3k variables wouldn't resolve, and got put into the unknown file... not bad though
 - I used AI -- GPT 40, GPT 4o-1, Claude, and Gemini back and forth as I worked out issues
 - There is a lot of logging and error handling... this was not an easy case, and there's a chance things still aren't perfect... such is life
+
+# UPDATES
+## 10/17/2024
+- Added partially working graph rag using neo4j. [Census Public Metadat Graph RAG](https://github.com/brockwebb/ExtractAllPublicCensusDatasetAndVariableMetadata/blob/main/CensusPublicMetadataRAG.ipynb)
+- Something isn't creating node relationships correctly...
+- Requires installing neo4j, which isn't ideal (I started with graphRAG but gave up)
