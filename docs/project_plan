@@ -381,7 +381,7 @@ To deploy the Knowledge Graph (KG) and hybrid RAG system into a stable productio
 
 Below is the visual representation of the project roadmap:
 
-![Project Roadmap](./images/CensusKnowledgeGraphProjectRoadmap.svg)
+![Project Roadmap](../images/CensusKnowledgeGraphProjectRoadmap.svg)
 
 ### Roadmap Mermaid Code
 graph TD
@@ -449,7 +449,7 @@ A high-level visual representation of the system clarifies how components intera
 
 Below is the visual representation of the project roadmap:
 
-![System Architecture](./images/CensusKnowledgeGraphSystemArchitecture.svg)
+![System Architecture](../images/CensusKnowledgeGraphSystemArchitecture.svg)
 
 
 
