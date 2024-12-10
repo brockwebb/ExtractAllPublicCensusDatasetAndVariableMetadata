@@ -1,0 +1,355 @@
+@prefix : <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://example.org/ontology> rdf:type owl:Ontology .
+
+:SurveyNode rdf:type owl:Class ;
+    rdfs:label "SurveyNode" .
+:ExamplesNode rdf:type owl:Class ;
+    rdfs:label "ExamplesNode" .
+:GeographyNode rdf:type owl:Class ;
+    rdfs:label "GeographyNode" .
+:SurveyGroupNode rdf:type owl:Class ;
+    rdfs:label "SurveyGroupNode" .
+:SurveyVariablesNoGroupNode rdf:type owl:Class ;
+    rdfs:label "SurveyVariablesNoGroupNode" .
+:ProcessedGroupNode rdf:type owl:Class ;
+    rdfs:label "ProcessedGroupNode" .
+
+:hasGeography rdf:type owl:ObjectProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range :GeographyNode ;
+    rdfs:label "hasGeography" .
+
+:hasExample rdf:type owl:ObjectProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range :ExamplesNode ;
+    rdfs:label "hasExample" .
+
+:linkedToGroup rdf:type owl:ObjectProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range :SurveyGroupNode ;
+    rdfs:label "linkedToGroup" .
+
+:hasVariables rdf:type owl:ObjectProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range :SurveyVariablesNoGroupNode ;
+    rdfs:label "hasVariables" .
+
+:relatedToGroup rdf:type owl:ObjectProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range :SurveyGroupNode ;
+    rdfs:label "relatedToGroup" .
+
+:Title_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Title for SurveyNode" .
+
+:Description_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Description for SurveyNode" .
+
+:Vintage_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Vintage for SurveyNode" .
+
+:Dataset_Name_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Dataset Name for SurveyNode" .
+
+:Dataset_Type_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Dataset Type for SurveyNode" .
+
+:Geography_List_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Geography List for SurveyNode" .
+
+:Variable_List_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Variable List for SurveyNode" .
+
+:Group_List_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Group List for SurveyNode" .
+
+:SortList_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SortList for SurveyNode" .
+
+:Examples_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Examples for SurveyNode" .
+
+:Developer_Documentation_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Developer Documentation for SurveyNode" .
+
+:API_Base_URL_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "API Base URL for SurveyNode" .
+
+:Survey_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Survey for SurveyNode" .
+
+:Subtype1_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Subtype1 for SurveyNode" .
+
+:Subtype2_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Subtype2 for SurveyNode" .
+
+:Subtype3_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Subtype3 for SurveyNode" .
+
+:Month_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Month for SurveyNode" .
+
+:identifier_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "identifier for SurveyNode" .
+
+:id_name_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "id name for SurveyNode" .
+
+:SurveyID_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyID for SurveyNode" .
+
+:Has_Example_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Has Example for SurveyNode" .
+
+:Has_Sort_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Has Sort for SurveyNode" .
+
+:Has_Geography_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Has Geography for SurveyNode" .
+
+:Has_Group_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Has Group for SurveyNode" .
+
+:SurveyGroupID_SurveyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyGroupID for SurveyNode" .
+
+:Geography_Hierarchy_ExamplesNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ExamplesNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Geography Hierarchy for ExamplesNode" .
+
+:Geography_Level_ExamplesNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ExamplesNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Geography Level for ExamplesNode" .
+
+:Example_URL_ExamplesNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ExamplesNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Example URL for ExamplesNode" .
+
+:Number_ExamplesNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ExamplesNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Number for ExamplesNode" .
+
+:SurveyID_ExamplesNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ExamplesNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyID for ExamplesNode" .
+
+:ReferenceDate_GeographyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GeographyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "ReferenceDate for GeographyNode" .
+
+:GeographyLevel_GeographyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GeographyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "GeographyLevel for GeographyNode" .
+
+:GeographyHierarchy_GeographyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GeographyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "GeographyHierarchy for GeographyNode" .
+
+:Limit_GeographyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GeographyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Limit for GeographyNode" .
+
+:SurveyID_GeographyNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :GeographyNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyID for GeographyNode" .
+
+:SurveyID_SurveyGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyID for SurveyGroupNode" .
+
+:GroupName_SurveyGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "GroupName for SurveyGroupNode" .
+
+:GroupDescription_SurveyGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "GroupDescription for SurveyGroupNode" .
+
+:GroupLink_SurveyGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "GroupLink for SurveyGroupNode" .
+
+:SurveyGroupID_SurveyGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyGroupID for SurveyGroupNode" .
+
+:SurveyID_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyID for SurveyVariablesNoGroupNode" .
+
+:Variable_Name_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Variable Name for SurveyVariablesNoGroupNode" .
+
+:Label_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Label for SurveyVariablesNoGroupNode" .
+
+:Concept_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Concept for SurveyVariablesNoGroupNode" .
+
+:Required_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Required for SurveyVariablesNoGroupNode" .
+
+:Attributes_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Attributes for SurveyVariablesNoGroupNode" .
+
+:Limit_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Limit for SurveyVariablesNoGroupNode" .
+
+:Predicate_Type_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Predicate Type for SurveyVariablesNoGroupNode" .
+
+:Group_SurveyVariablesNoGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :SurveyVariablesNoGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Group for SurveyVariablesNoGroupNode" .
+
+:SurveyID_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyID for ProcessedGroupNode" .
+
+:SurveyGroupID_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "SurveyGroupID for ProcessedGroupNode" .
+
+:Group_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Group for ProcessedGroupNode" .
+
+:Variable_Name_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Variable Name for ProcessedGroupNode" .
+
+:Variable_Link_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Variable Link for ProcessedGroupNode" .
+
+:Label_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Label for ProcessedGroupNode" .
+
+:Concept_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Concept for ProcessedGroupNode" .
+
+:Required_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Required for ProcessedGroupNode" .
+
+:Attributes_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Attributes for ProcessedGroupNode" .
+
+:Attribute_Of_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Attribute Of for ProcessedGroupNode" .
+
+:Attribute_Type_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Attribute Type for ProcessedGroupNode" .
+
+:Limit_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Limit for ProcessedGroupNode" .
+
+:Predicate_Type_ProcessedGroupNode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :ProcessedGroupNode ;
+    rdfs:range xsd:string ;
+    rdfs:label "Predicate Type for ProcessedGroupNode" .
+

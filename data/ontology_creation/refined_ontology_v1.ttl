@@ -1,0 +1,143 @@
+@prefix ex: <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Classes
+ex:SurveyNode a owl:Class ;
+    rdfs:label "Survey Node" ;
+    rdfs:comment "Represents an individual survey (e.g., ACS, Decennial Census)." .
+
+ex:SurveyGroupNode a owl:Class ;
+    rdfs:label "Survey Group Node" ;
+    rdfs:comment "Represents a collection of related variables within a survey." .
+
+ex:SurveyVariablesNoGroupNode a owl:Class ;
+    rdfs:label "Survey Variables No Group Node" ;
+    rdfs:comment "Represents variables not belonging to any group." .
+
+ex:GeographyNode a owl:Class ;
+    rdfs:label "Geography Node" ;
+    rdfs:comment "Represents geographic areas." .
+
+ex:WorkflowNode a owl:Class ;
+    rdfs:label "Workflow Node" ;
+    rdfs:comment "Represents analytical workflows or processes." .
+
+ex:TimePeriodNode a owl:Class ;
+    rdfs:label "Time Period Node" ;
+    rdfs:comment "Represents temporal contexts like years or vintages." .
+
+ex:ExamplesNode a owl:Class ;
+    rdfs:label "Examples Node" ;
+    rdfs:comment "Represents examples or use cases for survey data." .
+
+
+# Properties
+ex:hasGroup a owl:ObjectProperty ;
+    rdfs:label "has Group" ;
+    rdfs:comment "Links a survey to its groups." .
+
+ex:hasVariable a owl:ObjectProperty ;
+    rdfs:label "has Variable" ;
+    rdfs:comment "Links a group to its variables." .
+
+ex:contains a owl:ObjectProperty ;
+    rdfs:label "contains" ;
+    rdfs:comment "Indicates spatial containment (e.g., State contains County)." .
+
+ex:borders a owl:ObjectProperty ;
+    rdfs:label "borders" ;
+    rdfs:comment "Indicates adjacency between geographic entities." .
+
+ex:validInYear a owl:ObjectProperty ;
+    rdfs:label "valid In Year" ;
+    rdfs:comment "Links data to the year it is valid for." .
+
+ex:hasExample a owl:ObjectProperty ;
+    rdfs:label "has Example" ;
+    rdfs:comment "Links a survey to its illustrative examples." .
+
+ex:linkedToGroup a owl:ObjectProperty ;
+    rdfs:label "linked To Group" ;
+    rdfs:comment "Links no-group variables to parent surveys or groups." .
+
+ex:derivesFrom a owl:ObjectProperty ;
+    rdfs:label "derives From" ;
+    rdfs:comment "Indicates derivation relationships for processed data." .
+
+ex:rollsUpTo a owl:ObjectProperty ;
+    rdfs:label "rolls Up To" ;
+    rdfs:comment "Indicates aggregation across geographic or logical levels." .
+
+ex:calculates a owl:ObjectProperty ;
+    rdfs:label "calculates" ;
+    rdfs:comment "Connects workflows to calculated variables." .
+
+# Provenance Relationships
+ex:isUpdatedBy a owl:ObjectProperty ;
+    rdfs:label "is Updated By" ;
+    rdfs:comment "Indicates that a dataset or variable has been updated by another." .
+
+ex:hasSource a owl:ObjectProperty ;
+    rdfs:label "has Source" ;
+    rdfs:comment "Links a dataset, variable, or group to its originating source." .
+
+
+# Attributes
+ex:SurveyID a owl:DatatypeProperty ;
+    rdfs:label "Survey ID" ;
+    rdfs:domain ex:SurveyNode ;
+    rdfs:comment "Unique identifier for surveys (e.g., ACS2020)." .
+
+ex:GroupName a owl:DatatypeProperty ;
+    rdfs:label "Group Name" ;
+    rdfs:domain ex:SurveyGroupNode ;
+    rdfs:comment "Name of the survey group." .
+
+ex:VariableName a owl:DatatypeProperty ;
+    rdfs:label "Variable Name" ;
+    rdfs:domain ex:SurveyVariablesNoGroupNode ;
+    rdfs:comment "Name of the variable." .
+
+ex:GeographyLevel a owl:DatatypeProperty ;
+    rdfs:label "Geography Level" ;
+    rdfs:domain ex:GeographyNode ;
+    rdfs:comment "The level of the geographic area (e.g., state, county)." .
+
+ex:ReleaseYear a owl:DatatypeProperty ;
+    rdfs:label "Release Year" ;
+    rdfs:domain ex:SurveyNode ;
+    rdfs:comment "The year the survey data was released." .
+
+ex:Universe a owl:DatatypeProperty ;
+    rdfs:label "Universe" ;
+    rdfs:domain ex:SurveyVariablesNoGroupNode ;
+    rdfs:comment "The population or scope the variable applies to." .
+
+ex:Concept a owl:DatatypeProperty ;
+    rdfs:label "Concept" ;
+    rdfs:domain ex:SurveyVariablesNoGroupNode ;
+    rdfs:comment "High-level concept for a variable (e.g., Income)." .
+
+ex:MeasurementUnit a owl:DatatypeProperty ;
+    rdfs:label "Measurement Unit" ;
+    rdfs:domain ex:SurveyVariablesNoGroupNode ;
+    rdfs:comment "The unit of measurement for a variable (e.g., dollars, people)." .
+
+ex:DatasetType a owl:DatatypeProperty ;
+    rdfs:label "Dataset Type" ;
+    rdfs:domain ex:SurveyNode ;
+    rdfs:comment "Type of dataset (e.g., ACS, Decennial Census, Economic Census)." .
+
+ex:Source a owl:DatatypeProperty ;
+    rdfs:label "Source" ;
+    rdfs:domain ex:SurveyNode ;
+    rdfs:comment "The source of the dataset (e.g., Census Bureau API)." .
+
+
+# Example Relationships
+ex:SurveyNode ex:hasSource "Census Bureau API" .
+
+# Derived Data Example
+ex:VariableNode ex:isUpdatedBy ex:ProcessedGroupNode .
